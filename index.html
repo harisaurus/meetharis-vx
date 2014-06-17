@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Full Width Background With Fixed Nav Demo</title>
+	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<!-- <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"> -->
+	<link rel="stylesheet" href="css/grid.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css" />
+</head>
+<body>
+	<header>
+	    <div><h1>Header</h1></div>
+	    <nav>
+		    <a data-scroll href="#first">First Link</a>
+		    <a data-scroll href="#portfolio">Portfolio</a>
+		    <a data-scroll href="#third">Third Link</a>
+	    </nav>
+	</header>
+	<div class="hero" id="top"></div>
+	<div class="container">
+		<div id="portfolio">
+			<h1>Portfolio</h1>
+			<div class="twelve columns">
+				<div class="landscape">
+					<a href="#">
+						<!-- <img src="http://placehold.it/1176x500" alt="placehold.it"> -->
+						<img src="http://placehold.it/1176x774" alt="placehold.it">
+						<div class="hover">
+							<div class="vertical-c">
+								<h2>Item Name</h2>
+								<h3 class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, id adipisci nulla veniam. Nulla, labore!</h3>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="eight columns">
+				<div class="landscape">
+					<a href="#">
+						<img src="http://placehold.it/776x500" alt="placehold.it">
+						<div class="hover">
+							<div class="vertical-c">
+								<h2>Item Name</h2>
+								<h3 class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, ad esse ipsa dolorem repellat neque!</h3>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="four columns">
+				<div class="portrait">
+					<a href="#">
+						<img src="http://placehold.it/376x500" alt="placehold.it">
+						<div class="hover">
+							<div class="vertical-c">
+								<h2>Item Name</h2>
+								<h3 class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, ad esse ipsa dolorem repellat neque!</h3>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="six columns">
+				<div class="landscape">
+					<a href="#">
+						<img src="http://placehold.it/576x376" alt="placehold.it">
+						<div class="hover">
+							<div class="vertical-c">
+								<h2>Item Name</h2>
+								<h3 class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, ad esse ipsa dolorem repellat neque!</h3>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="six columns" style="float: right;">
+				<div class="portrait">
+					<a href="#">
+						<img src="http://placehold.it/576x774" alt="placehold.it">
+						<div class="hover">
+							<div class="vertical-c">
+								<h2>Item Name</h2>
+								<h3 class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, ad esse ipsa dolorem repellat neque!</h3>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="six columns" style="float: right;">
+				<div class="landscape">
+					<a href="#">
+						<img src="http://placehold.it/576x376" alt="placehold.it">
+						<div class="hover">
+							<div class="vertical-c">
+								<h2>Item Name</h2>
+								<h3 class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, ad esse ipsa dolorem repellat neque!</h3>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	
+
+	<footer>
+		<a data-scroll href="#top">Top</a>
+	</footer>
+	
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="js/smooth-scroll.js"></script> <!-- https://github.com/cferdinandi/smooth-scrol l-->
+	
+	<!-- SMOOTH SCROLL 
+	==================================== -->
+	<script>
+		smoothScroll.init({
+			speed: 1000,
+			easing: 'easeInOutCubic',
+			offset: 100,
+			updateURL: false
+		});
+	</script>
+
+	<!-- PORTFOLIO HOVER CENTER 
+	==================================== -->
+	<script>
+	$(window).bind("load", function() {
+		var contents = document.getElementsByClassName("vertical-c");
+		for (var i = 0; i < contents.length; i++)
+		{
+			var thisItem = contents.item(i)
+			var innerHeight = thisItem.offsetHeight;
+			thisItem.style.marginTop = "-"+(innerHeight/2)+"px";
+		}
+	}); 
+	</script>
+
+</body>
+</html>
