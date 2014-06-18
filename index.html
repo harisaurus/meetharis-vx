@@ -2,25 +2,46 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Full Width Background With Fixed Nav Demo</title>
+	<title>Meet Haris</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-	<!-- <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"> -->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/grid.css">
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/flexslider/2.2.2/flexslider-min.css">
 	<link rel="stylesheet" type="text/css" href="css/styles.css" />
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/flexslider/2.2.2/jquery.flexslider-min.js"></script>
 </head>
 <body>
 	<header>
 	    <div><h1>Header</h1></div>
 	    <nav>
-		    <a data-scroll href="#first">First Link</a>
+		    <a data-scroll href="#about">About Me</a>
 		    <a data-scroll href="#portfolio">Portfolio</a>
 		    <a data-scroll href="#third">Third Link</a>
 	    </nav>
 	</header>
 	<div class="hero" id="top"></div>
-	<div class="container">
+	<section id="about">
+		<h1 class="text-center">About Me</h1>
+		<hr class="short">
+		<div class="container">
+			<div class="twelve columns">
+				<div class="profile"><img src="images/haris.jpg" alt="Haris Mahmood"></div>
+			</div>
+			<div class="four columns">
+				<h3>Lorem ipsum dolor sit amet, consectetur.</h3>
+			</div>
+			<div class="eight columns">
+				<p>Hi, my name is Haris Mahmood. I'm a Web+UI designer & developer based in Toronto. I spend the majority of my time creating awesome user interfaces that look and function incredibly well. When I'm not doing this I'm either playing around with my camera, have my face flat against my pillow, or busy day-dreaming about Emma Watson, Isla Nublar and Winterfell.</p>
+				<p>My projects range from, but are not limited to, merch design for musicians, company branding + identity design, to full scale web applications. If there's something you need that I can't do, I'll help you get in touch with someone who can!</p>
+			</div>
+		</div>
+	</section>
+	<div class="container section-padding">
 		<div id="portfolio">
 			<h1>Portfolio</h1>
+			<hr class="short">
 			<div class="twelve columns">
 				<div class="landscape">
 					<a href="#">
@@ -100,27 +121,50 @@
 					</a>
 				</div>
 			</div>
-
 		</div>
 	</div>
+	
+	<section id="testimonials">
+		<div class="container">
+
+			<div class="ten columns offset-by-two text-center">
+			<img src="images/quote1.png" alt="Testimonials">
+				<div class="flexslider">
+					<ul class="slides">
+						<li>
+							<div><h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, praesentium veniam facere deserunt magnam commodi debitis ut beatae omnis? Atque.</h3>
+							<p class="author">Harry Potter</p></div>
+						</li>
+						<li>
+							<div><h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, veniam architecto quaerat ratione ex corrupti neque eaque expedita assumenda fugiat?</h3>
+							<p class="author">Harry Potter</p></div>
+						</li>
+						<li>
+							<div><h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor maxime facilis pariatur earum veritatis rerum itaque quas ipsum porro minus.</h3>
+							<p class="author">Harry Potter</p></div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
 	
 
 	<footer>
 		<a data-scroll href="#top">Top</a>
 	</footer>
 	
-	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-	<script src="js/smooth-scroll.js"></script> <!-- https://github.com/cferdinandi/smooth-scrol l-->
+	<script src="js/smooth-scroll.js"></script> <!-- https://github.com/cferdinandi/smooth-scroll -->
 	
 	<!-- SMOOTH SCROLL 
 	==================================== -->
 	<script>
-		smoothScroll.init({
-			speed: 1000,
-			easing: 'easeInOutCubic',
-			offset: 100,
-			updateURL: false
-		});
+	smoothScroll.init({
+		speed: 1000,
+		easing: 'easeInOutCubic',
+		offset: 100,
+		updateURL: false
+	});
 	</script>
 
 	<!-- PORTFOLIO HOVER CENTER 
@@ -136,6 +180,16 @@
 		}
 	}); 
 	</script>
+
+	<!-- PORTFOLIO HOVER CENTER 
+	==================================== -->
+	<script>
+	$(window).load(function() {
+		$('.flexslider').flexslider({
+			directionNav: false
+		});
+	});
+	 </script>
 
 </body>
 </html>
