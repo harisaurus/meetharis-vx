@@ -231,6 +231,13 @@ header nav a:focus:after{
 	-moz-background-size: cover;
 	-o-background-size: cover; 
 	background-size: cover; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero img{
+    width: 40vmin;
 }
 
 /* ABOUT
