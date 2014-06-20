@@ -88,7 +88,7 @@ hr {
 hr.short{
     border-width: 3px 0 0;
     border-color: #C61D38;
-    margin: 20px auto 35px;
+    margin: 20px auto 100px;
     width: 100px;
 }
 
@@ -242,6 +242,11 @@ header nav a:focus:after{
 
 /* ABOUT
 ================================================== */
+#about{
+    background-color: #fff;
+    padding: 60px 0;
+}
+
 #about .profile{
     height: 10vh;
     overflow: hidden;
@@ -287,10 +292,61 @@ header nav a:focus:after{
 }
 
 
+/* SERVICES
+================================================== */
+#services{
+    padding: 60px 0 76px;
+}
+
+#services > hr{
+    margin-bottom: 100px;
+}
+
+#services .service-icon{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    opacity: 0.5;
+}
+
+#services .three h4{
+    text-transform: uppercase;
+    font-size: 1.1em;
+    color: #444;
+    line-height: 1.4em;
+}
+
+#services .three small{
+    font-size: 0.8em;
+    line-height: 1.3em;
+    color: #777;
+    display: inline-block;
+}
+
+#services .three ul{
+    list-style-type: none;
+    padding-left: none;
+    font-size: 0.9em;
+    line-height: 1.8em;
+    color: #444;
+}
+
+#services .three hr{
+    border-color: #d5d5d5;
+    width: 80px;
+    border-width: 2px;
+    margin: 30px auto; 
+}
+
+
+
 /* PORTFOLIO
 ================================================== */
 #portfolio{
     text-align: center;
+    background-color: #fff;
 }
 
 #portfolio h1{
