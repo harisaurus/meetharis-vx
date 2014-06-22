@@ -15,11 +15,14 @@
 </head>
 <body>
 	<header>
-	    <div><h1>Header</h1></div>
+	    <div><h1>
+	    <!-- <img src="images/branding-small.png"> -->
+	    </h1></div>
 	    <nav>
 		    <a data-scroll href="#about">About Me</a>
+		    <a data-scroll href="#services">Services</a>
 		    <a data-scroll href="#portfolio">Portfolio</a>
-		    <a data-scroll href="#third">Third Link</a>
+		    <a data-scroll href="#contact">Contact</a>
 	    </nav>
 	</header>
 	<div class="hero" id="top">
@@ -30,20 +33,19 @@
 		<h1 class="text-center">About Me</h1>
 		<hr class="short">
 		<div class="container">
-			<div class="twelve columns">
-				<div class="profile"><img src="images/haris.jpg" alt="Haris Mahmood"></div>
+			<div class="twelve columns text-center">
+				<div class="profile"> <img src="images/haris.jpg"> </div>
+				
 			</div>
-			<div class="four columns">
-				<h3>Lorem ipsum dolor sit amet, consectetur.</h3>
+			<div class="ten columns offset-by-two text-center">
+				<p>Hello, my name is Haris Mahmood. I'm a Web+UI designer & developer based in Toronto. I spend the majority of my time creating awesome applications and user interfaces that look and function incredibly well. When I'm not doing this I'm either playing around with my camera, have my face flat against my pillow, or busy day-dreaming about Emma Watson, Isla Nublar and Winterfell.</p>
+				<p>My projects range from, but are not limited to, merch design for musicians, company branding + identity design, to full scale web applications.</p>
+
 				<ul class="social">
-                    <li><a href="#"><i class="fa fa-twitter fa-2x"></i></a></li>
-                    <li><a href="#"><i class="fa fa-facebook fa-2x"></i></a></li>
-                    <li><a href="#"><i class="fa fa-github fa-2x"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter-square fa-2x"></i></a></li>
+                    <li><a href="#"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+                    <li><a href="#"><i class="fa fa-github-square fa-2x"></i></a></li>
                 </ul>
-			</div>
-			<div class="eight columns">
-				<p>Hi, my name is Haris Mahmood. I'm a Web+UI designer & developer based in Toronto. I spend the majority of my time creating awesome user interfaces that look and function incredibly well. When I'm not doing this I'm either playing around with my camera, have my face flat against my pillow, or busy day-dreaming about Emma Watson, Isla Nublar and Winterfell.</p>
-				<p>My projects range from, but are not limited to, merch design for musicians, company branding + identity design, to full scale web applications. If there's something you need that I can't do, I'll help you get in touch with someone who can!</p>
 			</div>
 		</div>
 	</section>
@@ -72,7 +74,7 @@
 				<ul>
 					<li>Logo Design</li>
 					<li>Brand Identity Packages</li>
-					<li>Font customization</li>
+					<li>Font Customization</li>
 				</ul>
 			</div>
 			<div class="three columns text-center">
@@ -82,7 +84,7 @@
 				<hr>
 				<ul>
 					<li>Websites</li>
-					<li>Musician Merchandise</li>
+					<li>Merchandise</li>
 					<li>Posters</li>
 				</ul>
 			</div>
@@ -101,14 +103,14 @@
 	</section>
 
 	<div id="portfolio">
-		<div  class="container section-padding">
+		<div  class="container">
 			<h1>Portfolio</h1>
 			<hr class="short">
 			<div class="twelve columns">
 				<div class="landscape">
 					<a href="#">
 						<!-- <img src="http://placehold.it/1176x500" alt="placehold.it"> -->
-						<img src="http://placehold.it/1176x774" alt="placehold.it">
+						<img src="images/weblox-main.jpg" alt="placehold.it">
 						<div class="hover">
 							<div class="vertical-c">
 								<h2>Item Name</h2>
@@ -186,9 +188,36 @@
 		</div>
 	</div>
 
+	<section id="contact">
+		<div class="container text-center">
+			<h1>Contact</h1>
+			<hr class="short">
+			<div class="six columns ">
+				<form method="post" action="contactengine.php">
+					<input type="text" name="Name" id="Name" placeholder="Your Name"/>
+					<input type="text" name="Email" id="Email" placeholder="Your E-mail"/>
+					<textarea name="Message" rows="20" cols="20" id="Message" placeholder="Message"></textarea>
+
+					<input type="submit" name="submit" value="Submit" class="submit-button" />
+				</form>
+				
+				<div style="clear: both;"></div>
+			</div>
+			<div class="five columns text-left get-in-touch">
+				<h4>Lets Get In Touch</h4>
+				<p>Want to discus your ideas for a new project or just want to say hi? Fantastic! I'd love to chat and connect. Fill out the form or contact me on twitter, facebook, or linkedin.</p>
+
+				<h4>Social Stuff</h4>
+				<ul class="social">
+                    <li><a href="#"><i class="fa fa-twitter-square fa-lg"></i> Twitter </a></li>
+                    <li><a href="#"><i class="fa fa-facebook-square fa-lg"></i> Facebook </a></li>
+                    <li><a href="#"><i class="fa fa-linkedin-square fa-lg"></i> LinkedIn</a></li>
+                </ul>
+			</div>
+		</div>
+	</section>
 	
-	
-	<section id="testimonials">
+<!-- 	<section id="testimonials">
 		<div class="container">
 			<div class="ten columns offset-by-two text-center">
 			<img src="images/quote1.png" alt="Testimonials">
@@ -210,7 +239,7 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> -->
 
 	<section id="awesomeness">
 		<div class="container">
@@ -235,7 +264,7 @@
 		</div>
 	</footer>
 	
-	<a data-scroll href="#top" class="to-the-top"><i class="fa fa-angle-up"></i></a>
+	<!-- <a data-scroll href="#top" class="to-the-top"><i class="fa fa-angle-up"></i></a> -->
 
 
 	
@@ -247,7 +276,7 @@
 	smoothScroll.init({
 		speed: 1000,
 		easing: 'easeInOutCubic',
-		offset: 100,
+		offset: 0,
 		updateURL: false
 	});
 	</script>
@@ -266,7 +295,7 @@
 	}); 
 	</script>
 
-	<!-- PORTFOLIO HOVER CENTER 
+	<!-- FLEXSLIDER 
 	==================================== -->
 	<script>
 	$(window).load(function() {

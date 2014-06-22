@@ -120,6 +120,7 @@ header {
     width: 100%;
     text-transform: uppercase; 
     z-index: 1;
+    transition: all 0.5s;
 }
  
 header::after {
@@ -159,6 +160,8 @@ header nav a {
     color: white;
     text-decoration: none;
     position: relative;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
 }
  
 /*header nav a:last-child {
@@ -187,12 +190,19 @@ header nav a:focus:after{
     left:0;
     width:100%;
 }
+
+@media screen and (min-width: 721px){
+    header nav a{
+        color: #222;
+    }
+}
  
 @media screen and (max-width: 720px){
      
     header {
         height: auto;
         background: #212222;
+        transition: all 0.5s;
     }
      
     header > div,
@@ -238,22 +248,26 @@ header nav a:focus:after{
 
 .hero img{
     width: 40vmin;
+    transition: all 0.5s;
+}
+
+@media screen and (max-width: 480px){
+    .hero img{
+        width: 60vw;
+        transition: all 0.5s;
+    }
 }
 
 /* ABOUT
 ================================================== */
 #about{
-    background-color: #fff;
     padding: 60px 0;
 }
 
-#about .profile{
-    height: 10vh;
-    overflow: hidden;
-    margin-bottom: 80px;
-}
 #about .profile img{
-    width: 100%;
+    height: 150px;
+    border-radius: 50%;
+    margin-top:-50px;
 }
 
 #about .social{
@@ -276,17 +290,17 @@ header nav a:focus:after{
     transition: color 0.2s;
 }
 
-#about .social li a:hover .fa-twitter{
+#about .social li a:hover .fa-twitter-square{
     color: #4099FF;
     transition: color 0.2s;
 }
 
-#about .social li a:hover .fa-facebook{
+#about .social li a:hover .fa-facebook-square{
     color: #3D62B3;
     transition: color 0.2s;
 }
 
-#about .social li a:hover .fa-github{
+#about .social li a:hover .fa-github-square{
     color: #333333;
     transition: color 0.2s;
 }
@@ -296,6 +310,7 @@ header nav a:focus:after{
 ================================================== */
 #services{
     padding: 60px 0 76px;
+    background-color: #fff;
 }
 
 #services > hr{
@@ -340,13 +355,19 @@ header nav a:focus:after{
     margin: 30px auto; 
 }
 
+@media screen and (max-width: 720px){
+    #services .three{
+        margin-bottom: 100px;
+    }
+}
+
 
 
 /* PORTFOLIO
 ================================================== */
 #portfolio{
     text-align: center;
-    background-color: #fff;
+    padding: 60px 0 76px;
 }
 
 #portfolio h1{
@@ -406,6 +427,130 @@ header nav a:focus:after{
     font-size: .8em;
 }
 
+
+
+/* CONTACT
+================================================== */
+#contact{
+    background-color: #fff;
+    padding: 60px 0 76px;
+}
+
+#contact form input,
+#contact form textarea{
+    display: inline-block;
+    width: 100%;
+    min-height: 50px;
+    padding: 10px;
+    border: 2px solid #f4f4f4;
+    background: #f4f4f4;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    margin-bottom: 10px;
+    transition: all 0.3s;
+}
+
+#contact form input:focus,
+#contact form textarea:focus{
+    border-color: #222;
+    transition: all 0.3s;
+}
+
+#contact form .submit-button{
+    color: #fff;
+    background-color: #666;
+    border: 2px solid #666;
+    padding: 10px 23px;
+}
+
+#contact form .submit-button:hover{
+    border-color: #333;
+    background-color: #333;
+    cursor: pointer;
+}
+
+#contact h4{
+    text-transform: uppercase;
+}
+
+#contact .get-in-touch{
+    padding: 10px 0;
+}
+
+#contact .get-in-touch h4{
+    margin-bottom: 15px;
+}
+
+#contact .get-in-touch p{
+    font-size: 0.8em;
+    margin-top: 10px;
+    line-height: 1.9em;
+    margin-bottom: 25px;
+}
+
+#contact .social{
+    list-style-type: none;
+    padding: 0;
+}
+
+#contact .social li a{
+    color: #777;
+    text-decoration: none;
+    line-height: 2em;
+    font-size: 0.8em;
+}
+
+#contact .social li a:hover{
+    color: 333;
+}
+
+#contact .social li i{
+    width: 30px;
+}
+
+#contact .social li a .fa{
+    color: #999;
+    transition: color 0.2s;
+}
+
+#contact .social li a:hover .fa-twitter-square{
+    color: #4099FF;
+    transition: color 0.2s;
+}
+
+#contact .social li a:hover .fa-facebook-square{
+    color: #3D62B3;
+    transition: color 0.2s;
+}
+
+#contact .social li a:hover .fa-linkedin-square{
+    color: #333333;
+    transition: color 0.2s;
+}
+
+@media screen and (max-width: 768px){
+    #contact .social{
+    }
+
+    #contact .social li{
+        display: inline-block;
+        font-size: 1.1em;
+        width: 32%;
+    }
+
+    #contact .social li i{
+        width: auto;
+    }
+
+    #contact .social li:nth-child(2){
+        text-align: center;
+    }
+
+    #contact .social li:last-child{
+        text-align: right;
+    }
+}
 
 /* TESTIMONIALS
 ================================================== */
