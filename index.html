@@ -12,27 +12,28 @@
 	<link rel="stylesheet" type="text/css" href="css/styles.css" />
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/flexslider/2.2.2/jquery.flexslider-min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/0.1.2/scrollReveal.min.js"></script>
 </head>
 <body>
 	<header>
 	    <div><h1>
 	    <!-- <img src="images/branding-small.png"> -->
 	    </h1></div>
-	    <nav>
-		    <a data-scroll href="#about">About Me</a>
-		    <a data-scroll href="#services">Services</a>
-		    <a data-scroll href="#portfolio">Portfolio</a>
-		    <a data-scroll href="#contact">Contact</a>
+	    <nav data-scroll-reveal>
+		    <a data-scroll href="#about" data-scroll-reveal="wait 0.15s">About Me</a>
+		    <a data-scroll href="#services" data-scroll-reveal="wait 0.3s">Services</a>
+		    <a data-scroll href="#portfolio" data-scroll-reveal="wait 0.45s">Portfolio</a>
+		    <a data-scroll href="#contact" data-scroll-reveal="wait 0.6s">Contact</a>
 	    </nav>
 	</header>
 	<div class="hero" id="top">
 		<img src="images/branding-big.png" alt="Haris Mahmood - Designer + Developer">
 	</div>
 
-	<section id="about">
-		<h1 class="text-center">About Me</h1>
-		<hr class="short">
-		<div class="container">
+	<section id="about" data-scroll-reveal>
+		<h1 class="text-center" data-scroll-reveal>About Me</h1>
+		<hr class="short" data-scroll-reveal>
+		<div class="container" data-scroll-reveal>
 			<div class="twelve columns text-center">
 				<div class="profile"> <img src="images/haris.jpg"> </div>
 				
@@ -42,19 +43,19 @@
 				<p>My projects range from, but are not limited to, merch design for musicians, company branding + identity design, to full scale web applications.</p>
 
 				<ul class="social">
-                    <li><a href="#"><i class="fa fa-twitter-square fa-2x"></i></a></li>
-                    <li><a href="#"><i class="fa fa-facebook-square fa-2x"></i></a></li>
-                    <li><a href="#"><i class="fa fa-github-square fa-2x"></i></a></li>
+                    <li data-scroll-reveal="wait 0s"><a href="#"><i class="fa fa-twitter-square fa-2x"></i></a></li>
+                    <li data-scroll-reveal="wait .25s"><a href="#"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+                    <li data-scroll-reveal="wait .5s"><a href="#"><i class="fa fa-github-square fa-2x"></i></a></li>
                 </ul>
 			</div>
 		</div>
 	</section>
 
-	<section id="services">
+	<section id="services" data-scroll-reveal>
 		<h1 class="text-center">Services</h1>
 		<hr class="short"></hr>
 		<div class="container">
-			<div class="three columns text-center">
+			<div class="three columns text-center" data-scroll-reveal>
 				<div class="service-icon"><img src="images/keyboard.png"></div>
 				<h4>Development</h4>
 				<small>Robust + Powerful</small>
@@ -66,7 +67,7 @@
 					<li>Wordpress Themes</li>
 				</ul>
 			</div>
-			<div class="three columns text-center">
+			<div class="three columns text-center" data-scroll-reveal="wait .25s">
 				<div class="service-icon"><img src="images/fivepointed.png"></div>
 				<h4>Branding</h4>
 				<small>Image is Everything</small>
@@ -77,7 +78,7 @@
 					<li>Font Customization</li>
 				</ul>
 			</div>
-			<div class="three columns text-center">
+			<div class="three columns text-center" data-scroll-reveal="wait .5s">
 				<div class="service-icon"><img src="images/flatscreen.png"></div>
 				<h4>Design</h4>
 				<small>Fresh + Clean</small>
@@ -88,7 +89,7 @@
 					<li>Posters</li>
 				</ul>
 			</div>
-			<div class="three columns text-center">
+			<div class="three columns text-center" data-scroll-reveal="wait .75s">
 				<div class="service-icon"><img src="images/darts.png"></div>
 				<h4>Consulting</h4>
 				<small>Help Me Help You</small>
@@ -103,9 +104,9 @@
 	</section>
 
 	<div id="portfolio">
-		<div  class="container">
-			<h1>Portfolio</h1>
-			<hr class="short">
+		<div class="container">
+			<h1 data-scroll-reveal>Portfolio</h1>
+			<hr class="short" data-scroll-reveal>
 			<div class="twelve columns">
 				<div class="landscape">
 					<a href="#">
@@ -189,10 +190,10 @@
 	</div>
 
 	<section id="contact">
-		<div class="container text-center">
+		<div class="container text-center" data-scroll-reveal>
 			<h1>Contact</h1>
 			<hr class="short">
-			<div class="six columns ">
+			<div class="six columns" data-scroll-reveal="wait .25s">
 				<form method="post" action="contactengine.php">
 					<input type="text" name="Name" id="Name" placeholder="Your Name"/>
 					<input type="text" name="Email" id="Email" placeholder="Your E-mail"/>
@@ -203,7 +204,7 @@
 				
 				<div style="clear: both;"></div>
 			</div>
-			<div class="five columns text-left get-in-touch">
+			<div class="five columns text-left get-in-touch" data-scroll-reveal="wait .5s">
 				<h4>Lets Get In Touch</h4>
 				<p>Want to discus your ideas for a new project or just want to say hi? Fantastic! I'd love to chat and connect. Fill out the form or contact me on twitter, facebook, or linkedin.</p>
 
@@ -243,7 +244,7 @@
 
 	<section id="awesomeness">
 		<div class="container">
-			<div class="twelve columns text-center">
+			<div class="twelve columns text-center" data-scroll-reveal>
 				
                 <p>awesomeness [aw-<i>suh</i> m nes] <br>
 					<span>1. an unmeasurable amount of awesomenimity something can produce.</span><br>
@@ -255,7 +256,7 @@
 	</section>
 
 	<footer id="footer">
-		<div class="container">
+		<div class="container" data-scroll-reveal="enter from the top">
 			<div class="twelve columns text-center">
 				<div class="made-with-love">
                     Made with <i class="fa fa-heart"></i> in Toronto
@@ -303,7 +304,26 @@
 			directionNav: false
 		});
 	});
-	 </script>
+	</script>
+
+	<!-- SCROLLREVEAL 
+	==================================== -->
+	<script>
+    // ScrollReveal Starting Defaults.
+    var config = {
+            after: '0s',
+            enter: 'bottom',
+            move: '24px',
+            over: '0.66s',
+            easing: 'ease-in-out',
+            viewportFactor: 0.15,
+            reset: false,
+            init: true
+          };
+    window.scrollReveal = new scrollReveal( config );
+    </script>
+
+
 
 </body>
 </html>
