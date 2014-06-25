@@ -14,7 +14,7 @@
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/flexslider/2.2.2/jquery.flexslider-min.js"></script>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/0.1.2/scrollReveal.min.js"></script>
 </head>
-<body>
+<body id="body">
 	<header>
 	    <div><h1>
 	    <!-- <img src="images/branding-small.png"> -->
@@ -103,13 +103,15 @@
 		</div>
 	</section>
 
+    
+
 	<div id="portfolio">
 		<div class="container">
 			<h1 data-scroll-reveal>Portfolio</h1>
 			<hr class="short" data-scroll-reveal>
 			<div class="twelve columns">
 				<div class="landscape">
-					<a href="#">
+					<a title="portfolio-1">
 						<!-- <img src="http://placehold.it/1176x500" alt="placehold.it"> -->
 						<img src="images/weblox-main.jpg" alt="placehold.it">
 						<div class="hover">
@@ -175,7 +177,7 @@
 			</div>
 			<div class="six columns" style="float: right;">
 				<div class="landscape">
-					<a href="#">
+					<a onclick="showDiv('p1')">
 						<img src="http://placehold.it/576x376" alt="placehold.it">
 						<div class="hover">
 							<div class="vertical-c">
@@ -188,6 +190,31 @@
 			</div>
 		</div>
 	</div>
+
+	<div id="portfolio-modal">
+		<span onclick="hideDiv()">XX</span>
+		THIS IS A MODAL
+		<div class="modal-item" id="p1">P1 Content</div>
+		<div class="modal-item" id="p2">P2 Content</div>
+		<div class="modal-item" id="p3">P3 Content</div>
+	</div>
+
+	
+
+	<script>
+		function showDiv(showit){
+			var item = showit;
+			document.getElementById("portfolio-modal").classList.add("active");
+			document.getElementById(item).style.display = "block";
+		}
+
+		function hideDiv(){
+			document.getElementById('portfolio-modal').classList.remove("active");
+			var divArray = document.getElementsByClassName('modal-item');
+			for (var i = 0; i< divArray.length; i++)
+			{ divArray[i].style.display = 'none'; }
+		}
+	</script>
 
 	<section id="contact">
 		<div class="container text-center" data-scroll-reveal>
@@ -325,5 +352,11 @@
 
 
 
+
+
+
+
 </body>
 </html>
+
+
