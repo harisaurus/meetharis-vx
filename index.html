@@ -111,13 +111,13 @@
 			<hr class="short" data-scroll-reveal>
 			<div class="twelve columns">
 				<div class="landscape">
-					<a title="portfolio-1">
+					<a onclick="showDiv('portfolio-1')">
 						<!-- <img src="http://placehold.it/1176x500" alt="placehold.it"> -->
-						<img src="images/weblox-main.jpg" alt="placehold.it">
+						<img src="images/port/weblox-main.jpg" alt="placehold.it">
 						<div class="hover">
 							<div class="vertical-c">
-								<h2>Item Name</h2>
-								<h3 class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, id adipisci nulla veniam. Nulla, labore!</h3>
+								<h2>Weblox</h2>
+								<h3 class="desc">Ruby on Rails + HTML + CSS + JS</h3>
 							</div>
 						</div>
 					</a>
@@ -125,7 +125,7 @@
 			</div>
 			<div class="eight columns">
 				<div class="landscape">
-					<a href="#">
+					<a onclick="showDiv('portfolio-2')">
 						<img src="http://placehold.it/776x500" alt="placehold.it">
 						<div class="hover">
 							<div class="vertical-c">
@@ -138,12 +138,12 @@
 			</div>
 			<div class="four columns">
 				<div class="portrait">
-					<a href="#">
-						<img src="http://placehold.it/376x500" alt="placehold.it">
+					<a onclick="showDiv('portfolio-3')">
+						<img src="images/port/jodiepotter-main.jpg" alt="Jodie Potter">
 						<div class="hover">
 							<div class="vertical-c">
-								<h2>Item Name</h2>
-								<h3 class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, ad esse ipsa dolorem repellat neque!</h3>
+								<h2>Jodie Potter</h2>
+								<h3 class="desc">Branding</h3>
 							</div>
 						</div>
 					</a>
@@ -151,7 +151,7 @@
 			</div>
 			<div class="six columns">
 				<div class="landscape">
-					<a href="#">
+					<a onclick="showDiv('portfolio-4')">
 						<img src="http://placehold.it/576x376" alt="placehold.it">
 						<div class="hover">
 							<div class="vertical-c">
@@ -164,7 +164,7 @@
 			</div>
 			<div class="six columns" style="float: right;">
 				<div class="portrait">
-					<a href="#">
+					<a onclick="showDiv('portfolio-5')">
 						<img src="http://placehold.it/576x774" alt="placehold.it">
 						<div class="hover">
 							<div class="vertical-c">
@@ -177,7 +177,7 @@
 			</div>
 			<div class="six columns" style="float: right;">
 				<div class="landscape">
-					<a onclick="showDiv('p1')">
+					<a onclick="showDiv('portfolio-6')">
 						<img src="http://placehold.it/576x376" alt="placehold.it">
 						<div class="hover">
 							<div class="vertical-c">
@@ -192,11 +192,44 @@
 	</div>
 
 	<div id="portfolio-modal">
-		<span onclick="hideDiv()">XX</span>
-		THIS IS A MODAL
-		<div class="modal-item" id="p1">P1 Content</div>
-		<div class="modal-item" id="p2">P2 Content</div>
-		<div class="modal-item" id="p3">P3 Content</div>
+	<div class="modal-content">
+
+		<img src="images/prohibited.png" class="close-modal" onclick="hideDiv()">
+		<div class="modal-item weblox" id="portfolio-1">
+		<div class="container">
+			<div class="twelve columns">
+				<h1>Weblox</h1>
+				<h4>Weblox is an easy-to-use webpage template builder. It allows users to generate a fully responsive webpage based on the Bootstrap framework. This app was built using Ruby on Rails.</h4>
+				<a class="website" href="http://www.buildweblox.com">buildweblox.com</a>
+				<hr class="short">
+				<img src="images/port/weblox-header.jpg">
+				<img src="images/port/weblox-1.jpg">
+				<img src="images/port/weblox-3.jpg">
+				<img src="images/port/weblox-4.jpg">
+				<img src="images/port/weblox-5.jpg">
+				<img src="images/port/weblox-6.png" style="border: 1px solid #e5e5e5;">
+				<img src="images/port/weblox-7.png" style="border: 1px solid #e5e5e5;">
+				<img src="images/port/weblox-8.png" style="border: 1px solid #e5e5e5;">
+			</div>
+		</div>
+		</div>
+		<div class="modal-item" id="portfolio-2">P2 Content</div>
+		<div class="modal-item jodiepotter" id="portfolio-3">
+			<div class="container">
+				<div class="twelve columns">
+					<h1>Jodie Potter</h1>
+					<h4>Jodie Potter is a U.S. based wedding photographer focusing in portraits for weddings, maternity, newborn babies, seniors, families and engagements. The client preferred to stay away from the traditional and cliche photography-related branding concepts, and opted for something a little more personal. The final design is a combination of Jodie's initials merged into one.</h4>
+					<hr class="short">
+					<img src="images/port/jodiepotter-header.jpg">
+
+				</div>
+			</div>
+		</div>
+		<div class="modal-item" id="portfolio-4">P4 Content</div>
+		<div class="modal-item" id="portfolio-5">P5 Content</div>
+		<div class="modal-item" id="portfolio-6">P6 Content</div>
+
+	</div>
 	</div>
 
 	
