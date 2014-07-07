@@ -285,22 +285,22 @@ header nav a:focus:after{
 
 #about .social li:last-child{ padding-right: 0; }
 
-#about .social li a .fa{
+div .social li a .fa{
     color: #999;
     transition: color 0.2s;
 }
 
-#about .social li a:hover .fa-twitter-square{
+div .social li a:hover .fa-twitter-square{
     color: #4099FF;
     transition: color 0.2s;
 }
 
-#about .social li a:hover .fa-facebook-square{
-    color: #3D62B3;
+div .social li a:hover .fa-linkedin-square{
+    color: #1B86BC;
     transition: color 0.2s;
 }
 
-#about .social li a:hover .fa-github-square{
+div .social li a:hover .fa-github-square{
     color: #333333;
     transition: color 0.2s;
 }
@@ -499,6 +499,10 @@ header nav a:focus:after{
     padding: 0;
 }
 
+#contact .social li{
+    display: inline-block;
+}
+
 #contact .social li a{
     color: #777;
     text-decoration: none;
@@ -514,34 +518,16 @@ header nav a:focus:after{
     width: 30px;
 }
 
-#contact .social li a .fa{
-    color: #999;
-    transition: color 0.2s;
-}
-
-#contact .social li a:hover .fa-twitter-square{
-    color: #4099FF;
-    transition: color 0.2s;
-}
-
-#contact .social li a:hover .fa-facebook-square{
-    color: #3D62B3;
-    transition: color 0.2s;
-}
-
-#contact .social li a:hover .fa-linkedin-square{
-    color: #333333;
-    transition: color 0.2s;
-}
-
 @media screen and (max-width: 768px){
     #contact .social{
+        text-align: center;
+        margin-top: 40px;
     }
 
     #contact .social li{
         display: inline-block;
         font-size: 1.1em;
-        width: 32%;
+        padding: 0 30px;
     }
 
     #contact .social li i{
@@ -557,52 +543,7 @@ header nav a:focus:after{
     }
 }
 
-/* TESTIMONIALS
-================================================== */
-#testimonials{
-    background-color: #222;
-    padding: 80px 0 56px;
-}
 
-#testimonials .flexslider{
-    background: none;
-    border: none;
-    margin: 0;
-    box-shadow: none;
-}
-
-#testimonials .slides li{
-    height: 350px;
-    text-align: center;
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-}
-
-#testimonials .slides li h3{
-    font-size: 1.6em;
-    line-height: 1.8em;
-    color: white;
-}
-
-#testimonials .slides li p{
-    color: #888;
-    margin-top: 30px;
-    text-transform: uppercase;
-    display: inline-block;
-}
-
-@media screen and (max-width: 720px){
-    #testimonials .slides li h3{
-        font-size: 1.1em;
-        line-height: 1.1em;
-        padding: 0 20px;
-    }
-}
-
-#testimonials, #testimonials:after{
-    clear: both;
-}
 
 /* AWESOMENESS
 ================================================== */
