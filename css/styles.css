@@ -298,6 +298,7 @@ header nav a:focus:after{
 #about .social li{
     display: inline-block;
     padding: 0 10px;
+    vertical-align: top;
 }
 
 #about .social li:first-child{ padding-left: 0; }
@@ -324,6 +325,49 @@ div .social li a:hover .fa-github-square{
     transition: color 0.2s;
 }
 
+div .social li a{
+    height: 32px;
+    line-height: 32px;
+    display: block;
+}
+
+div .social li a.resume-button{
+    text-decoration: none;
+    color: #999;
+    text-transform: uppercase;
+    height: 32px;
+    line-height: 28px;
+    border: 2px solid #999;
+    font-size: 12px;
+    padding: 0 15px;
+    border-radius: 5px;
+    transition: all 0.2s;
+}
+
+div .social li a.resume-button:hover{
+    color: #C61D38;
+    border-color: #C61D38;
+    transition: all 0.2s;
+}
+
+@media screen and (max-width: 960px){
+    #about .social li:nth-child(3){
+        padding-right: 0;
+    }
+
+
+    #about .social li:last-child{
+        display: block;
+        text-align: center;
+        margin-top: 30px;
+        padding: 0;
+    }
+
+    div .social li a.resume-button{
+        display: inline-block;
+        width: 135px;
+    }
+}
 
 /* SERVICES
 ================================================== */
