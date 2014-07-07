@@ -262,12 +262,31 @@ header nav a:focus:after{
 ================================================== */
 #about{
     padding: 60px 0;
+    font-family: 'Montserrat', inherit, sans-serif;
 }
 
+
+
 #about .profile img{
-    height: 150px;
-    border-radius: 50%;
-    margin-top:-50px;
+    width: 80%;
+    border-radius: 5px;
+}
+
+@media screen and (min-width: 769px) and (max-width: 960px){
+    #about .six{
+        width: 100%;
+        margin: 0;
+    }
+
+    #about .profile img{
+        width: 336px;
+    }
+}
+
+@media screen and (max-width: 960px){
+    #about .six{
+        text-align: center;
+    }
 }
 
 #about .social{
@@ -279,32 +298,76 @@ header nav a:focus:after{
 #about .social li{
     display: inline-block;
     padding: 0 10px;
+    vertical-align: top;
 }
 
 #about .social li:first-child{ padding-left: 0; }
 
 #about .social li:last-child{ padding-right: 0; }
 
-#about .social li a .fa{
+div .social li a .fa{
     color: #999;
     transition: color 0.2s;
 }
 
-#about .social li a:hover .fa-twitter-square{
+div .social li a:hover .fa-twitter-square{
     color: #4099FF;
     transition: color 0.2s;
 }
 
-#about .social li a:hover .fa-facebook-square{
-    color: #3D62B3;
+div .social li a:hover .fa-linkedin-square{
+    color: #1B86BC;
     transition: color 0.2s;
 }
 
-#about .social li a:hover .fa-github-square{
+div .social li a:hover .fa-github-square{
     color: #333333;
     transition: color 0.2s;
 }
 
+div .social li a{
+    height: 32px;
+    line-height: 32px;
+    display: block;
+}
+
+div .social li a.resume-button{
+    text-decoration: none;
+    color: #999;
+    text-transform: uppercase;
+    height: 32px;
+    line-height: 28px;
+    border: 2px solid #999;
+    font-size: 12px;
+    padding: 0 15px;
+    border-radius: 5px;
+    transition: all 0.2s;
+}
+
+div .social li a.resume-button:hover{
+    color: #C61D38;
+    border-color: #C61D38;
+    transition: all 0.2s;
+}
+
+@media screen and (max-width: 960px){
+    #about .social li:nth-child(3){
+        padding-right: 0;
+    }
+
+
+    #about .social li:last-child{
+        display: block;
+        text-align: center;
+        margin-top: 30px;
+        padding: 0;
+    }
+
+    div .social li a.resume-button{
+        display: inline-block;
+        width: 135px;
+    }
+}
 
 /* SERVICES
 ================================================== */
@@ -388,7 +451,7 @@ header nav a:focus:after{
 }
 
 #portfolio .hover {
-    background-color: rgba(255,255,255,0.7);
+    background-color: rgba(255,255,255,0.8);
     position: absolute;
     text-align: center;
     height: calc(100% - 30px);
@@ -499,6 +562,10 @@ header nav a:focus:after{
     padding: 0;
 }
 
+#contact .social li{
+    display: inline-block;
+}
+
 #contact .social li a{
     color: #777;
     text-decoration: none;
@@ -514,34 +581,16 @@ header nav a:focus:after{
     width: 30px;
 }
 
-#contact .social li a .fa{
-    color: #999;
-    transition: color 0.2s;
-}
-
-#contact .social li a:hover .fa-twitter-square{
-    color: #4099FF;
-    transition: color 0.2s;
-}
-
-#contact .social li a:hover .fa-facebook-square{
-    color: #3D62B3;
-    transition: color 0.2s;
-}
-
-#contact .social li a:hover .fa-linkedin-square{
-    color: #333333;
-    transition: color 0.2s;
-}
-
 @media screen and (max-width: 768px){
     #contact .social{
+        text-align: center;
+        margin-top: 40px;
     }
 
     #contact .social li{
         display: inline-block;
         font-size: 1.1em;
-        width: 32%;
+        padding: 0 30px;
     }
 
     #contact .social li i{
@@ -557,52 +606,7 @@ header nav a:focus:after{
     }
 }
 
-/* TESTIMONIALS
-================================================== */
-#testimonials{
-    background-color: #222;
-    padding: 80px 0 56px;
-}
 
-#testimonials .flexslider{
-    background: none;
-    border: none;
-    margin: 0;
-    box-shadow: none;
-}
-
-#testimonials .slides li{
-    height: 350px;
-    text-align: center;
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-}
-
-#testimonials .slides li h3{
-    font-size: 1.6em;
-    line-height: 1.8em;
-    color: white;
-}
-
-#testimonials .slides li p{
-    color: #888;
-    margin-top: 30px;
-    text-transform: uppercase;
-    display: inline-block;
-}
-
-@media screen and (max-width: 720px){
-    #testimonials .slides li h3{
-        font-size: 1.1em;
-        line-height: 1.1em;
-        padding: 0 20px;
-    }
-}
-
-#testimonials, #testimonials:after{
-    clear: both;
-}
 
 /* AWESOMENESS
 ================================================== */
