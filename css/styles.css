@@ -758,3 +758,25 @@ color: #a6a6a6;
 #portfolio-modal .modal-item img:last-child{
     margin-bottom: 2em;
 }
+
+@media screen and (min-width: 900px){
+    #portfolio-modal .modal-item .img-half-left{
+        width: 49%;
+        float: left;
+    }
+
+    #portfolio-modal .modal-item .img-half-right{
+        width: 49%;
+        float: right;
+    }
+
+    #portfolio-modal .modal-item .img-half-right:after{
+        content: "";
+        clear: both;
+    }
+
+}
+
+
+
+
