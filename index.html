@@ -17,7 +17,7 @@
 <body id="body">
 	<header>
 	    <div><h1>
-	    <!-- <img src="images/branding-small.png"> -->
+	    <img src="images/hmbranding-big.png">
 	    </h1></div>
 	    <nav data-scroll-reveal>
 		    <a data-scroll href="#about" data-scroll-reveal="wait 0.15s">About Me</a>
@@ -27,7 +27,19 @@
 	    </nav>
 	</header>
 	<div class="hero" id="top">
-		<img src="images/branding-big.png" alt="Haris Mahmood -- Designer + Developer">
+		<div class="hero-content">
+			<!-- <img class="brand" src="images/branding-big.png" alt="Haris Mahmood -- Designer + Developer"> -->
+			<!-- <img class="brand" src="images/hmbranding-big.png" alt="Haris Mahmood -- Designer + Developer"> -->
+			<p class="gradient-mask-text">Web Application Developer <span>+</span> User Interface Designer based in Toronto, Canada</p>
+
+		</div>
+
+		<div class="mouse-wrap">
+			<div class="mouse">
+			  <div class="scroller"></div>
+			</div>
+		</div>
+  
 	</div>
 
 	<section id="about" data-scroll-reveal>
@@ -46,7 +58,7 @@
                     <li data-scroll-reveal="wait 0s"><a href="http://twitter.com/harismahmood89"><i class="fa fa-twitter-square fa-2x"></i></a></li>
                     <li data-scroll-reveal="wait .25s"><a href="ca.linkedin.com/pub/haris-mahmood/50/b66/1b0/"><i class="fa fa-linkedin-square fa-2x"></i></a></li>
                     <li data-scroll-reveal="wait .5s"><a href="http://github.com/harismahmood89"><i class="fa fa-github-square fa-2x"></i></a></li>
-                    <li data-scroll-reveal="wait .75s"><a href="#" class="resume-button">RESUMÉ</a></li>
+                    <li data-scroll-reveal="wait .75s"><a href="harismahmood-resume.pdf" class="resume-button">RESUMÉ</a></li>
                 </ul>
 			</div>
 		</div>
@@ -227,7 +239,16 @@
 				</div>
 			</div>
 		</div>
-		<div class="modal-item" id="portfolio-4">P4 Content</div>
+		<div class="modal-item" id="portfolio-4">
+			<div class="container">
+				<div class="twelve columns">
+					<h1>Vanier College Council</h1>
+					<h4>Vanier College Council is one of eight colleges at York University. This project involved rebranding and merch design.</h4>
+					<hr class="short">
+					<img src="images/port/vcc-main.jpg" alt="Vanier College Council">
+				</div>
+			</div>
+		</div>
 
 		<div class="modal-item" id="portfolio-5">
 			<div class="container">
@@ -248,35 +269,16 @@
 	</div>
 	</div>
 
-	
-
-	<script>
-		function showDiv(showit){
-			$("html,body").css("overflow","hidden");
-			var item = showit;
-			document.getElementById("portfolio-modal").classList.add("active");
-			document.getElementById(item).style.display = "block";
-
-		}
-
-		function hideDiv(){
-			$("html,body").css("overflow","auto");  
-			document.getElementById('portfolio-modal').classList.remove("active");
-			var divArray = document.getElementsByClassName('modal-item');
-			for (var i = 0; i< divArray.length; i++)
-			{ divArray[i].style.display = 'none'; }
-		}
-	</script>
 
 	<section id="contact">
 		<div class="container text-center" data-scroll-reveal>
 			<h1>Contact</h1>
 			<hr class="short">
 			<div class="six columns" data-scroll-reveal="wait .25s">
-				<form method="post" action="contactengine.php">
-					<input type="text" name="Name" id="Name" placeholder="Your Name"/>
-					<input type="text" name="Email" id="Email" placeholder="Your E-mail"/>
-					<textarea name="Message" rows="20" cols="20" id="Message" placeholder="Message"></textarea>
+				<form name="htmlform" method="post" action="contactengine.php">
+					<input type="text" name="name" id="Name" placeholder="Your Name"/>
+					<input type="text" name="email" id="Email" placeholder="Your E-mail"/>
+					<textarea name="message" rows="20" cols="20" id="Message" placeholder="Message"></textarea>
 
 					<input type="submit" name="submit" value="Submit" class="submit-button" />
 				</form>
@@ -379,8 +381,23 @@
     </script>
 
 
+	<!-- PORTFOLIO SHOW+HIDE
+	==================================== -->
+	<script>
+		function showDiv(showit){
+			$("html,body").css("overflow","hidden");
+			$("#portfolio-modal").addClass("active");
+			$("#"+showit).css("display", "block");
+		}
 
-
+		function hideDiv(){
+			$("html,body").css("overflow","auto");
+			$("#portfolio-modal").removeClass("active");
+			var divArray = document.getElementsByClassName('modal-item');
+			for (var i = 0; i< divArray.length; i++)
+			{ divArray[i].style.display = 'none'; }
+		}
+	</script>
 
 
 

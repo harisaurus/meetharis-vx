@@ -191,6 +191,10 @@ header nav a:focus:after{
     width:100%;
 }
 
+header img{
+    width: 130px;
+}
+
 @media screen and (min-width: 721px){
     header nav a{
         color: #222;
@@ -233,10 +237,9 @@ header nav a:focus:after{
 ================================================== */
 .hero{
 	height: 100vh;
-	background-image: url('../images/polygon.jpg');
+	background-image: url('../images/hero-bg.jpg');
 	background-repeat: no-repeat;
 	background-position: center center;
-	/*background-attachment: fixed; */
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover; 
@@ -256,6 +259,82 @@ header nav a:focus:after{
         width: 60vw;
         transition: all 0.5s;
     }
+}
+
+.hero-content{
+    text-align: center;
+    width: 60vw;
+}
+
+.gradient-mask-text{
+    font-family: 'Montserrat', inherit, sans-serif;
+  font-size: 2em;
+  line-height: 1.4em;
+  width: 60vw;
+  margin: 0 auto;
+  position: relative;
+  padding: 30px 20px;
+  background: transparent; 
+  /*background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #C61D38), color-stop(100%, #61c2ff));
+  background: -webkit-linear-gradient(-45deg, #C61D38 0%, #61c2ff 100%);*/
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #222), color-stop(100%, #999));
+  background: -webkit-linear-gradient(-45deg, #222 0%, #999 100%);
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+  background-clip: text; 
+  text-fill-color: transparent;
+    /* C61D38 */
+}
+
+.gradient-mask-text span{
+    color: #C61D38 !important;
+}
+
+.mouse-wrap{
+  position: absolute;
+  display: block;
+  bottom: 80px;
+  left: 50%;
+  margin-left: -14px;
+  
+}
+
+.mouse{
+  width: 28px;
+  height: 50px;
+  border: 2px solid #999;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+}
+
+.scroller{
+  width: 4px;
+  height: 4px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  background: #999;
+  top: 7px;
+  left: 11px;
+  position: relative;
+  -webkit-animation: mousescroll 1s ease-out infinite ;
+  -moz-animation: mousescroll 1s ease-out infinite ;
+}
+
+@-webkit-keyframes mousescroll {
+  0%{
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+    height: 4px;
+   }
+  100%{
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+    opacity: 0; 
+    height: 10px;
+  }
 }
 
 /* ABOUT

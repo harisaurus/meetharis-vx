@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Hextime</title>
+	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="styles.css">
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+</head>
+<body>
+	<div class="page-bg">
+		<div id="clock" class="time-container"></div>
+	</div>
+	<footer> HEXTIME by HARIS MAHMOOD </footer>
+
+	<script>
+		function updateClock ( )
+		    {
+		    var currentTime = new Date ( );
+		    var currentHours = currentTime.getHours ( );
+		    var currentMinutes = currentTime.getMinutes ( );
+		    var currentSeconds = currentTime.getSeconds ( );
+		 
+		    // Pad the minutes and seconds with leading zeros, if required
+		    currentMinutes = ( currentMinutes < 10 ? "0" : "" ) + currentMinutes;
+		    currentSeconds = ( currentSeconds < 10 ? "0" : "" ) + currentSeconds;
+		 
+		    // Compose the string for display
+		    var currentTimeString = "#" + currentHours + currentMinutes + currentSeconds ;
+		     
+		     
+		    $("#clock").html(currentTimeString);
+		    $(".page-bg").css("background-color", currentTimeString);
+		         
+		 }
+		 
+		$(document).ready(function()
+		{
+		   setInterval('updateClock()', 1000);
+		});
+	</script>
+</body>
+</html>
+
