@@ -205,10 +205,15 @@ header img{
      
     header {
         height: auto;
-        background: #212222;
+        background: #e5e5e5;
         transition: all 0.5s;
+        padding: 0.5em 5%;
     }
-     
+    
+    header nav a{
+        color: #222;
+    }
+
     header > div,
     header > div h1,
     header nav {
@@ -226,8 +231,8 @@ header img{
         padding-bottom: 0;
     }
 
-    header > div h1{
-        display: none;
+    header > div h1 img{
+        width: 80px;
     }
 }
 
