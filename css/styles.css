@@ -237,7 +237,7 @@ header img{
 ================================================== */
 .hero{
 	height: 100vh;
-	background-image: url('../images/hero-bg.jpg');
+	background-image: url('../images/polygon.jpg');
 	background-repeat: no-repeat;
 	background-position: center center;
 	-webkit-background-size: cover;
